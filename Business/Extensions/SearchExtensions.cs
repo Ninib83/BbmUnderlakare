@@ -10,11 +10,7 @@ namespace BbmUnderlakare.Business.Extensions
 {
     public static class SearchExtensions
     {
-        public static ITypeSearch<T> WildCardQuery<T>(
-            this ITypeSearch<T> search,
-            string query,
-            Expression<Func<T, string>> fieldSelector,
-            double? boost = null)
+        public static ITypeSearch<T> WildCardQuery<T>(this ITypeSearch<T> search, string query, Expression<Func<T, string>> fieldSelector, double? boost = null)
         {
             //Create the Wildcard query object
             var fieldName = search.Client.Conventions

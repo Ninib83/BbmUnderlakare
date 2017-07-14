@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿
 using System.Linq;
 using System.Web.Mvc;
 using EPiServer;
@@ -6,6 +6,8 @@ using EPiServer.Core;
 using EPiServer.Framework.DataAnnotations;
 using EPiServer.Web.Mvc;
 using BbmUnderlakare.Models.Pages;
+using BbmUnderlakare.Models.ViewModels;
+using System;
 
 namespace BbmUnderlakare.Controllers.Pages
 {
@@ -13,8 +15,14 @@ namespace BbmUnderlakare.Controllers.Pages
     {
         public ActionResult Index(HospitalFormAt currentPage)
         {
-            /* Implementation of action. You can create your own view model class that you pass to the view or
-             * you can pass the page type for simpler templates */
+            //var hospitalModel = new AllHospitalAtViewmodel(hospitalPage);
+            //if (hospitalPage != null)
+            //{
+            //    return View(hospitalModel);
+            //}
+
+            //var model = new List<HospitalFormAt>();
+            //model.Add(new HospitalFormAt() { });
 
             return View(currentPage);
         }

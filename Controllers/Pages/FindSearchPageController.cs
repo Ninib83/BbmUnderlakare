@@ -1,7 +1,11 @@
-﻿using BbmUnderlakare.Models.Pages;
+﻿using BbmUnderlakare.Business.Extensions;
+using BbmUnderlakare.Models.Pages;
 using BbmUnderlakare.Models.ViewModels;
+using EPiServer.Core;
 using EPiServer.Find;
+using EPiServer.Find.Api.Querying.Queries;
 using EPiServer.Find.Framework;
+using EPiServer.Find.Framework.Statistics;
 using EPiServer.Find.UnifiedSearch;
 using EPiServer.Framework.DataAnnotations;
 using EPiServer.Web.Mvc;
@@ -32,8 +36,14 @@ namespace BbmUnderlakare.Controllers.Pages
             {
                 return View(model);
             }
-            var unifiedSearch = SearchClient.Instance.UnifiedSearchFor(q);
+
+            var unifiedSearch = SearchClient.Instance
+            .UnifiedSearch().For(q)
+            .WildCardQuery(string.Concat(q, "*"), x => x.SearchTitle)
+            .WildCardQuery(string.Concat(q, "*"), x => x.SearchText)           
+            .Track();
             model.Results = unifiedSearch.GetResult(hitSpec);
+
             return View(model);
 
         }

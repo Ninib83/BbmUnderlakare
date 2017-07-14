@@ -52,6 +52,9 @@
       <HintPath>..\packages\Castle.Windsor.3.4.0\lib\net45\Castle.Windsor.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Elasticsearch.Net, Version=5.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>packages\Elasticsearch.Net.5.3.0\lib\net46\Elasticsearch.Net.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -189,6 +192,9 @@
       <HintPath>..\packages\Microsoft.Web.Xdt.2.1.1\lib\net40\Microsoft.Web.XmlTransform.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Nest, Version=5.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>packages\NEST.5.3.0\lib\net46\Nest.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -321,18 +327,19 @@
     <Compile Include="Business\Entities\StartP.cs" />
     <Compile Include="Business\Exceptions\ExtensionMethods.cs" />
     <Compile Include="Business\Exceptions\HandledException.cs" />
+    <Compile Include="Business\Extensions\FilterExtension.cs" />
     <Compile Include="Business\Extensions\SearchExtensions.cs" />
     <Compile Include="Business\Formatters\TextMediaTypeFormatter.cs" />
     <Compile Include="Business\Initializations\DependencyResolverInitialization.cs" />
     <Compile Include="Business\Registries\DefaultRegistry.cs" />
     <Compile Include="Business\Resolvers\StructureMapDependencyResolver.cs" />
     <Compile Include="Business\Services\AtPageService.cs" />
-    <Compile Include="Business\Services\HospitalSearchService.cs" />
     <Compile Include="Business\Services\Interfaces\IAtPageService.cs" />
-    <Compile Include="Business\Services\Interfaces\IHospitalSearchService.cs" />
     <Compile Include="Business\Services\Interfaces\ILogService.cs" />
-    <Compile Include="Business\Services\Interfaces\IPaging.cs" />
+    <Compile Include="Business\Entities\Interfaces\IPaging.cs" />
+    <Compile Include="Business\Entities\Interfaces\ISearch.cs" />
     <Compile Include="Business\Services\Interfaces\Log4NetLogService.cs" />
+    <Compile Include="Business\Services\Search.cs" />
     <Compile Include="Controllers\Api\StandardPageApiController.cs" />
     <Compile Include="Controllers\Pages\AtCityPageController.cs" />
     <Compile Include="Controllers\Pages\AtCountyPageController.cs" />
@@ -354,9 +361,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Business\Enums\" />
-    <Folder Include="Business\Factories\Interfaces\" />
-    <Folder Include="Business\Helpers\" />
+    <Folder Include="Controllers\Block\" />
     <Folder Include="Models\Blocks\" />
     <Folder Include="Models\Media\" />
     <Folder Include="Models\Pages\Base\" />
@@ -366,6 +371,7 @@
     <Folder Include="Views\Shared\Layouts\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />

@@ -4,12 +4,18 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
+//using BbmUnderlakare.Data.Models;
 
 namespace BbmUnderlakare.Models.Pages
 {
     [ContentType(DisplayName = "HospitalFormAt", GUID = "c28416e0-4e8d-4982-bf25-9a91d9946852", Description = "")]
+    [AvailableContentTypes(Availability = EPiServer.DataAbstraction.Availability.None)]
     public class HospitalFormAt : PageData
     {
+        //[Required]
+        //[Display(Name = "Sorterings ordning", GroupName = GroupNames.Tabs.Content, Order = 900)]
+        //public virtual int IndexSortOrder { get; set; }
+
         [CultureSpecific]
         [Display(
            Name = "Huvudman:",
