@@ -42,7 +42,7 @@ namespace BbmUnderlakare.Controllers.Pages
             .WildCardQuery(string.Concat(q, "*"), x => x.SearchTitle)
             .WildCardQuery(string.Concat(q, "*"), x => x.SearchText)           
             .Track();
-            model.Results = unifiedSearch.GetResult(hitSpec);
+            model.Results = unifiedSearch.ApplyBestBets(200).GetResult(hitSpec);
 
             return View(model);
 

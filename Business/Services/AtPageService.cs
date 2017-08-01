@@ -166,55 +166,55 @@ namespace BbmUnderlakare.Business.Services
         }
         #endregion
 
-        #region Hämta alla sjukhusformulär
+        #region Hämta alla sjukhusformulär inte i funktion
 
-        public IEnumerable<ISingelAtFormList> GetAllHospitalForms()
-        {
-            var startPage = ContentReference.StartPage;
-            var countyPage = _contentLoader.GetChildren<AtCountyPage>(startPage);
+        //public IEnumerable<ISingelAtFormList> GetAllHospitalForms()
+        //{
+        //    var startPage = ContentReference.StartPage;
+        //    var countyPage = _contentLoader.GetChildren<AtCountyPage>(startPage);
 
-            
 
-            foreach (var countyProp in countyPage)
-            {
-                List<AtForm> hospitalFormList = new List<AtForm>();
-                var hospitalPage = _contentLoader.GetChildren<HospitalFormAt>(countyProp.ContentLink);
-                foreach (var hospitalProp in hospitalPage)
-                {
-                    var formProp = new AtForm(hospitalProp.ContentLink.ID,
-                                             hospitalProp.Name,
-                                             countyProp.Name,
-                                             hospitalProp.ATblockensLangd,
-                                             hospitalProp.ATBlockTermin,
-                                             hospitalProp.AntalSokandeBlock,
-                                             hospitalProp.Ingangslon,
-                                             hospitalProp.LonEfter18Manader,
-                                             hospitalProp.STLon,
-                                             hospitalProp.Studiepott,
-                                             hospitalProp.Personalbostad,
-                                             hospitalProp.HyresnivaTreaRok,
-                                             hospitalProp.Bostadsmarknad,
-                                             hospitalProp.HjalpAttHittaBoende,
-                                             hospitalProp.Introduktion,
-                                             hospitalProp.Undervisning,
-                                             hospitalProp.HandledareHuvudansvar,
-                                             hospitalProp.MentorHuvudhandledare,
-                                             hospitalProp.Ledarskapsutbildning,
-                                             hospitalProp.BetaldATStamma,
-                                             hospitalProp.EnsamPaNattjour,
-                                             hospitalProp.STTjansterErbjuds,
-                                             hospitalProp.MojlighetTillVikariat,
-                                             hospitalProp.ObesattaTjanster,
-                                             hospitalProp.Upptagningsomrade,
-                                             hospitalProp.Ovrigt,
-                                             hospitalProp.Kontaktperson);
-                    hospitalFormList.Add(formProp);
-                }
 
-                yield return new SingelAtFormList(hospitalFormList);
-            }
+        //    foreach (var countyProp in countyPage)
+        //    {
+        //        List<AtForm> hospitalFormList = new List<AtForm>();
+        //        var hospitalPage = _contentLoader.GetChildren<HospitalFormAt>(countyProp.ContentLink);
+        //        foreach (var hospitalProp in hospitalPage)
+        //        {
+        //            var formProp = new AtForm(hospitalProp.ContentLink.ID,
+        //                                     hospitalProp.Name,
+        //                                     countyProp.Name,
+        //                                     hospitalProp.ATblockensLangd,
+        //                                     hospitalProp.ATBlockTermin,
+        //                                     hospitalProp.AntalSokandeBlock,
+        //                                     hospitalProp.Ingangslon,
+        //                                     hospitalProp.LonEfter18Manader,
+        //                                     hospitalProp.STLon,
+        //                                     hospitalProp.Studiepott,
+        //                                     hospitalProp.Personalbostad,
+        //                                     hospitalProp.HyresnivaTreaRok,
+        //                                     hospitalProp.Bostadsmarknad,
+        //                                     hospitalProp.HjalpAttHittaBoende,
+        //                                     hospitalProp.Introduktion,
+        //                                     hospitalProp.Undervisning,
+        //                                     hospitalProp.HandledareHuvudansvar,
+        //                                     hospitalProp.MentorHuvudhandledare,
+        //                                     hospitalProp.Ledarskapsutbildning,
+        //                                     hospitalProp.BetaldATStamma,
+        //                                     hospitalProp.EnsamPaNattjour,
+        //                                     hospitalProp.STTjansterErbjuds,
+        //                                     hospitalProp.MojlighetTillVikariat,
+        //                                     hospitalProp.ObesattaTjanster,
+        //                                     hospitalProp.Upptagningsomrade,
+        //                                     hospitalProp.Ovrigt,
+        //                                     hospitalProp.Kontaktperson);
+        //            hospitalFormList.Add(formProp);
+        //        }
 
-        }
+        //        yield return new SingelAtFormList(hospitalFormList);
+        //    }
+
+        //}
 
         #endregion
 

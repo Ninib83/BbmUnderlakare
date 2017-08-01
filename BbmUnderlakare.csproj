@@ -320,14 +320,17 @@
     <Compile Include="Business\Entities\Interfaces\IAtCity.cs" />
     <Compile Include="Business\Entities\Interfaces\IAtCounty.cs" />
     <Compile Include="Business\Entities\Interfaces\IAtForm.cs" />
+    <Compile Include="Business\Entities\Interfaces\ISearch.cs" />
+    <Compile Include="Business\Entities\Interfaces\ISearchResult.cs" />
     <Compile Include="Business\Entities\Interfaces\ISingelAtFormList.cs" />
     <Compile Include="Business\Entities\Interfaces\IStartP.cs" />
     <Compile Include="Business\Entities\Paging.cs" />
+    <Compile Include="Business\Entities\Search.cs" />
+    <Compile Include="Business\Entities\SearchResult.cs" />
     <Compile Include="Business\Entities\SingelAtFormList.cs" />
     <Compile Include="Business\Entities\StartP.cs" />
     <Compile Include="Business\Exceptions\ExtensionMethods.cs" />
     <Compile Include="Business\Exceptions\HandledException.cs" />
-    <Compile Include="Business\Extensions\FilterExtension.cs" />
     <Compile Include="Business\Extensions\SearchExtensions.cs" />
     <Compile Include="Business\Formatters\TextMediaTypeFormatter.cs" />
     <Compile Include="Business\Initializations\DependencyResolverInitialization.cs" />
@@ -337,9 +340,10 @@
     <Compile Include="Business\Services\Interfaces\IAtPageService.cs" />
     <Compile Include="Business\Services\Interfaces\ILogService.cs" />
     <Compile Include="Business\Entities\Interfaces\IPaging.cs" />
-    <Compile Include="Business\Entities\Interfaces\ISearch.cs" />
+    <Compile Include="Business\Services\Interfaces\ISerachService.cs" />
     <Compile Include="Business\Services\Interfaces\Log4NetLogService.cs" />
-    <Compile Include="Business\Services\Search.cs" />
+    <Compile Include="Business\Services\SearchService.cs" />
+    <Compile Include="Controllers\Api\SerachPageApiController.cs" />
     <Compile Include="Controllers\Api\StandardPageApiController.cs" />
     <Compile Include="Controllers\Pages\AtCityPageController.cs" />
     <Compile Include="Controllers\Pages\AtCountyPageController.cs" />
@@ -403,7 +407,7 @@
     <Content Include="Views\AtCityPage\Index.cshtml" />
     <Content Include="Views\AtCountyPage\Index.cshtml" />
     <Content Include="Views\FindSearchPage\Index.cshtml" />
-    <Content Include="Views\SearchFilter\Index.cshtml" />
+    <Content Include="Views\SearchFilterPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
