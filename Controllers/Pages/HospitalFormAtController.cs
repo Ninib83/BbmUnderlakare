@@ -15,15 +15,6 @@ namespace BbmUnderlakare.Controllers.Pages
     {
         public ActionResult Index(HospitalFormAt currentPage)
         {
-            //var hospitalModel = new AllHospitalAtViewmodel(hospitalPage);
-            //if (hospitalPage != null)
-            //{
-            //    return View(hospitalModel);
-            //}
-
-            //var model = new List<HospitalFormAt>();
-            //model.Add(new HospitalFormAt() { });
-
             return View(currentPage);
         }
     }

@@ -331,6 +331,7 @@
     <Compile Include="Business\Entities\StartP.cs" />
     <Compile Include="Business\Exceptions\ExtensionMethods.cs" />
     <Compile Include="Business\Exceptions\HandledException.cs" />
+    <Compile Include="Business\Extensions\HospitalFilterExtensions.cs" />
     <Compile Include="Business\Extensions\SearchExtensions.cs" />
     <Compile Include="Business\Formatters\TextMediaTypeFormatter.cs" />
     <Compile Include="Business\Initializations\DependencyResolverInitialization.cs" />
@@ -349,6 +350,7 @@
     <Compile Include="Controllers\Pages\AtCountyPageController.cs" />
     <Compile Include="Controllers\Pages\FindSearchPageController.cs" />
     <Compile Include="Controllers\Pages\HospitalFormAtController.cs" />
+    <Compile Include="Controllers\Pages\SearchFilterPageController.cs" />
     <Compile Include="Controllers\Pages\StartPageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -358,6 +360,7 @@
     <Compile Include="Models\Pages\AtCityPage.cs" />
     <Compile Include="Models\Pages\AtCountyPage.cs" />
     <Compile Include="Models\Pages\HospitalFormAt.cs" />
+    <Compile Include="Models\Pages\SearchFilterPage.cs" />
     <Compile Include="Models\Pages\SearchPage.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Models\ViewModels\FindSearchPageViewModel.cs" />

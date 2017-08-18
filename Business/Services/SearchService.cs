@@ -16,6 +16,7 @@ namespace BbmUnderlakare.Business.Services
 {
     public class SearchService : ISerachService
     {
+        #region Sök funktion
         public IEnumerable<SearchResult> GetSerachResults(string searchQuery)
         {
             List<SearchResult> resultList = new List<SearchResult>();
@@ -51,5 +52,7 @@ namespace BbmUnderlakare.Business.Services
 
             return resultList;
         }
+        #endregion
+
     }
 }
