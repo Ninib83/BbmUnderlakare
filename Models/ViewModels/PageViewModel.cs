@@ -10,5 +10,13 @@ namespace BbmUnderlakare.Models.ViewModels
         {
             this.currentPage = currentPage;
         }
+
+        private SearchFilterPage currentFilterPage;
+
+        public PageViewModel(SearchFilterPage currentFilterPage)
+        {
+            this.currentFilterPage = currentFilterPage;
+        }
+
     }
 }

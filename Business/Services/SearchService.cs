@@ -1,22 +1,23 @@
 ﻿using BbmUnderlakare.Business.Entities;
 using BbmUnderlakare.Business.Extensions;
+using BbmUnderlakare.Business.Filters;
 using BbmUnderlakare.Business.Services.Interfaces;
-using EPiServer;
-using EPiServer.Core;
+using BbmUnderlakare.Models.Pages;
 using EPiServer.Find;
+using EPiServer.Find.Cms;
 using EPiServer.Find.Framework;
 using EPiServer.Find.Framework.Statistics;
 using EPiServer.Find.UnifiedSearch;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace BbmUnderlakare.Business.Services
 {
-    public class SearchService : ISerachService
+    public class SearchService : ISearchService
     {
-        public IEnumerable<SearchResult> GetSerachResults(string searchQuery)
+
+        #region Sök funktion
+        public IEnumerable<SearchResult> GetSearchResults(string searchQuery)
         {
             List<SearchResult> resultList = new List<SearchResult>();
 
@@ -51,5 +52,9 @@ namespace BbmUnderlakare.Business.Services
 
             return resultList;
         }
+        #endregion
+
+      
+
     }
 }
