@@ -32,8 +32,8 @@ namespace BbmUnderlakare.Business.Registries
                 ////Services
 
                 For<IAtPageService>().Use<AtPageService>();
-                For<ISerachService>().Use<SearchService>();
-                //For<IContainer>().Use<Container>();
+                For<ISearchService>().Use<SearchService>();
+                For<IFilterService>().Use<FilterService>();
 
 
                 //Logging

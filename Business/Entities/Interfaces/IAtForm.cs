@@ -15,23 +15,23 @@ namespace BbmUnderlakare.Business.Entities.Interfaces
         string ATblockensLangd { get; }
         string ATBlockTermin { get; }
         string AntalSokandeBlock { get; }
-        string Ingangslon { get; }
-        string LonEfter18Manader { get; }
-        string STLon { get; }
+        int Ingangslon { get; }
+        bool LonEfter18Manader { get; }
+        int STLon { get; }
         string Studiepott { get; }
-        string Personalbostad { get; }
+        bool Personalbostad { get; }
         string HyresnivaTreaRok { get; }
         string Bostadsmarknad { get; }
-        string HjalpAttHittaBoende { get; }
+        bool HjalpAttHittaBoende { get; }
         string Introduktion { get; }
         string Undervisning { get; }
         string HandledareHuvudansvar { get; }
         string MentorHuvudhandledare { get; }
-        string Ledarskapsutbildning { get; }
-        string BetaldATStamma { get; }
-        string EnsamPaNattjour { get; }
-        string STTjansterErbjuds { get; }
-        string MojlighetTillVikariat { get; }
+        bool Ledarskapsutbildning { get; }
+        bool BetaldATStamma { get; }
+        bool EnsamPaNattjour { get; }
+        bool STTjansterErbjuds { get; }
+        bool MojlighetTillVikariat { get; }
         string ObesattaTjanster { get; }
         string Upptagningsomrade { get; }
         XhtmlString Ovrigt { get; }

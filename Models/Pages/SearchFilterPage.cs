@@ -4,20 +4,21 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
+using System.Collections.Generic;
 
 namespace BbmUnderlakare.Models.Pages
 {
-    [ContentType(DisplayName = "SearchFilterPage", GUID = "e105f43a-a9c3-42cc-a74d-b861d6867ef5", Description = "")]
+    [ContentType(DisplayName = "SearchFilterPage", GUID = "b1a8fbb7-5496-494f-86eb-8cf93e2ba375", Description = "")]
     public class SearchFilterPage : PageData
     {
-        /*
-                [CultureSpecific]
-                [Display(
-                    Name = "Main body",
-                    Description = "The main body will be shown in the main content area of the page, using the XHTML-editor you can insert for example text, images and tables.",
-                    GroupName = SystemTabNames.Content,
-                    Order = 1)]
-                public virtual XhtmlString MainBody { get; set; }
-         */
+
+        //[CultureSpecific]
+        //[Display(
+        //    Name = "Hospitals",
+        //    Description = "",
+        //    GroupName = SystemTabNames.Content,
+        //    Order = 10)]
+        //public virtual IList<HospitalFormAt> Hospitals { get; set; }
+
     }
 }

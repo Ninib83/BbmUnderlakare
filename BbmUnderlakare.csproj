@@ -333,19 +333,24 @@
     <Compile Include="Business\Exceptions\HandledException.cs" />
     <Compile Include="Business\Extensions\HospitalFilterExtensions.cs" />
     <Compile Include="Business\Extensions\SearchExtensions.cs" />
+    <Compile Include="Business\Filters\Filter.cs" />
+    <Compile Include="Business\Filters\Interfaces\IFilter.cs" />
     <Compile Include="Business\Formatters\TextMediaTypeFormatter.cs" />
     <Compile Include="Business\Initializations\DependencyResolverInitialization.cs" />
     <Compile Include="Business\Registries\DefaultRegistry.cs" />
     <Compile Include="Business\Resolvers\StructureMapDependencyResolver.cs" />
     <Compile Include="Business\Services\AtPageService.cs" />
+    <Compile Include="Business\Services\FilterService.cs" />
     <Compile Include="Business\Services\Interfaces\IAtPageService.cs" />
+    <Compile Include="Business\Services\Interfaces\IFilterService.cs" />
     <Compile Include="Business\Services\Interfaces\ILogService.cs" />
     <Compile Include="Business\Entities\Interfaces\IPaging.cs" />
-    <Compile Include="Business\Services\Interfaces\ISerachService.cs" />
+    <Compile Include="Business\Services\Interfaces\ISearchService.cs" />
     <Compile Include="Business\Services\Interfaces\Log4NetLogService.cs" />
     <Compile Include="Business\Services\SearchService.cs" />
-    <Compile Include="Controllers\Api\SerachPageApiController.cs" />
-    <Compile Include="Controllers\Api\StandardPageApiController.cs" />
+    <Compile Include="Controllers\Api\FilterPageApiController.cs" />
+    <Compile Include="Controllers\Api\SearchPageApiController.cs" />
+    <Compile Include="Controllers\Api\HospitalPageApiController.cs" />
     <Compile Include="Controllers\Pages\AtCityPageController.cs" />
     <Compile Include="Controllers\Pages\AtCountyPageController.cs" />
     <Compile Include="Controllers\Pages\FindSearchPageController.cs" />
@@ -365,6 +370,7 @@
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Models\ViewModels\FindSearchPageViewModel.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
+    <Compile Include="Models\ViewModels\SearchFilterPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -12,7 +12,6 @@ namespace BbmUnderlakare.Business.Extensions
     {
         public static ITypeSearch<T> WildCardQuery<T>(this ITypeSearch<T> search, string query, Expression<Func<T, string>> fieldSelector, double? boost = null)
         {
-            //Create the Wildcard query object
             var fieldName = search.Client.Conventions
                 .FieldNameConvention
                 .GetFieldNameForAnalyzed(fieldSelector);
@@ -21,7 +20,6 @@ namespace BbmUnderlakare.Business.Extensions
                 query.ToLowerInvariant());
             wildcardQuery.Boost = boost;
 
-            //Add it to the search request body
             return new Search<T, WildcardQuery>(search, context =>
             {
                 if (context.RequestBody.Query != null)

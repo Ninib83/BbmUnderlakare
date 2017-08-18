@@ -16,23 +16,23 @@ namespace BbmUnderlakare.Business.Entities
                       string aTblockensLangd, 
                       string aTBlockTermin, 
                       string antalSokandeBlock, 
-                      string ingangslon, 
-                      string lonEfter18Manader, 
-                      string sTLon, 
-                      string studiepott, 
-                      string personalbostad, 
+                      int ingangslon, 
+                      bool lonEfter18Manader, 
+                      int sTLon, 
+                      string studiepott,
+                      bool personalbostad, 
                       string hyresnivaTreaRok, 
-                      string bostadsmarknad, 
-                      string hjalpAttHittaBoende,
+                      string bostadsmarknad,
+                      bool hjalpAttHittaBoende,
                       string introduktion,
                       string undervisning,
                       string handledareHuvudansvar,
                       string mentorHuvudhandledare,
-                      string ledarskapsutbildning,
-                      string betaldATStamma,
-                      string ensamPaNattjour,
-                      string sTTjansterErbjuds,
-                      string mojlighetTillVikariat,
+                      bool ledarskapsutbildning,
+                      bool betaldATStamma,
+                      bool ensamPaNattjour,
+                      bool sTTjansterErbjuds,
+                      bool mojlighetTillVikariat,
                       string obesattaTjanster,
                       string upptagningsomrade,
                       XhtmlString ovrigt,
@@ -98,18 +98,18 @@ namespace BbmUnderlakare.Business.Entities
             get;
         }
 
-        public string Ingangslon
+        public int Ingangslon
         {
             get;
 
         }
 
-        public string LonEfter18Manader
+        public bool LonEfter18Manader
         {
             get;
         }
 
-        public string STLon
+        public int STLon
         {
             get;
         }
@@ -119,7 +119,7 @@ namespace BbmUnderlakare.Business.Entities
             get;
         }
 
-        public string Personalbostad
+        public bool Personalbostad
         {
             get;
         }
@@ -134,7 +134,7 @@ namespace BbmUnderlakare.Business.Entities
             get;
         }
 
-        public string HjalpAttHittaBoende
+        public bool HjalpAttHittaBoende
         {
             get;
         }
@@ -159,27 +159,27 @@ namespace BbmUnderlakare.Business.Entities
             get;
         }
 
-        public string Ledarskapsutbildning
+        public bool Ledarskapsutbildning
         {
             get;
         }
 
-        public string BetaldATStamma
+        public bool BetaldATStamma
         {
             get;
         }
 
-        public string EnsamPaNattjour
+        public bool EnsamPaNattjour
         {
             get;
         }
 
-        public string STTjansterErbjuds
+        public bool STTjansterErbjuds
         {
             get;
         }
 
-        public string MojlighetTillVikariat
+        public bool MojlighetTillVikariat
         {
             get;
         }

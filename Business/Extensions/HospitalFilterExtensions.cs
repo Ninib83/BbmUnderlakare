@@ -18,7 +18,7 @@ namespace BbmUnderlakare.Business.Extensions
         public static FilterExpression<HospitalFormAt> SalaryExists(this HospitalFormAt hospital)
         {
             return new FilterExpression<HospitalFormAt>(
-                h => h.Ingangslon.InRange("0", "20000")
+                h => h.Ingangslon.InRange("0", "200000")
                 | h.Ingangslon.Exists());
         }
 

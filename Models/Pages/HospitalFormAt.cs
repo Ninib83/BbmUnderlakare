@@ -54,7 +54,7 @@ namespace BbmUnderlakare.Models.Pages
             Description = "Name field's description",
             GroupName = SystemTabNames.Content,
             Order = 5)]
-        public virtual string Ingangslon { get; set; }
+        public virtual int Ingangslon { get; set; }
 
         [CultureSpecific]
         [Display(
@@ -62,7 +62,7 @@ namespace BbmUnderlakare.Models.Pages
            Description = "Name field's description",
            GroupName = SystemTabNames.Content,
            Order = 6)]
-        public virtual string LonEfter18Manader { get; set; }
+        public virtual bool LonEfter18Manader { get; set; }
 
         [CultureSpecific]
         [Display(
@@ -70,7 +70,7 @@ namespace BbmUnderlakare.Models.Pages
             Description = "Name field's description",
             GroupName = SystemTabNames.Content,
             Order = 7)]
-        public virtual string STLon { get; set; }
+        public virtual int STLon { get; set; }
 
         [CultureSpecific]
         [Display(
@@ -86,7 +86,7 @@ namespace BbmUnderlakare.Models.Pages
             Description = "Name field's description",
             GroupName = SystemTabNames.Content,
             Order = 9)]
-        public virtual string Personalbostad { get; set; }
+        public virtual bool Personalbostad { get; set; }
 
         [CultureSpecific]
         [Display(
@@ -110,7 +110,7 @@ namespace BbmUnderlakare.Models.Pages
             Description = "Name field's description",
             GroupName = SystemTabNames.Content,
             Order = 12)]
-        public virtual string HjalpAttHittaBoende { get; set; }
+        public virtual bool HjalpAttHittaBoende { get; set; }
 
         [CultureSpecific]
         [Display(
@@ -158,7 +158,7 @@ namespace BbmUnderlakare.Models.Pages
             Description = "Name field's description",
             GroupName = SystemTabNames.Content,
             Order = 18)]
-        public virtual string Ledarskapsutbildning { get; set; }
+        public virtual bool Ledarskapsutbildning { get; set; }
 
         [CultureSpecific]
         [Display(
@@ -166,7 +166,7 @@ namespace BbmUnderlakare.Models.Pages
             Description = "Name field's description",
             GroupName = SystemTabNames.Content,
             Order = 19)]
-        public virtual string BetaldATStamma { get; set; }
+        public virtual bool BetaldATStamma { get; set; }
 
         [CultureSpecific]
         [Display(
@@ -174,7 +174,7 @@ namespace BbmUnderlakare.Models.Pages
             Description = "Name field's description",
             GroupName = SystemTabNames.Content,
             Order = 20)]
-        public virtual string EnsamPaNattjour { get; set; }
+        public virtual bool EnsamPaNattjour { get; set; }
 
         [CultureSpecific]
         [Display(
@@ -182,7 +182,7 @@ namespace BbmUnderlakare.Models.Pages
             Description = "Name field's description",
             GroupName = SystemTabNames.Content,
             Order = 21)]
-        public virtual string STTjansterErbjuds { get; set; }
+        public virtual bool STTjansterErbjuds { get; set; }
 
         [CultureSpecific]
         [Display(
@@ -190,7 +190,7 @@ namespace BbmUnderlakare.Models.Pages
            Description = "Name field's description",
            GroupName = SystemTabNames.Content,
            Order = 22)]
-        public virtual string MojlighetTillVikariat { get; set; }
+        public virtual bool MojlighetTillVikariat { get; set; }
 
         [CultureSpecific]
         [Display(
